@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+font-family: 'Arimo', 'KoHo', arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.mobile-view{
+  background-image: url("../img/bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 50%;
+  min-height: 70vh;
+  margin: 0 auto;
+}
+nav {
+background: linear-gradient(to bottom,rgba(139,69,19, 0.5) 50%, rgba(255,203,0,0) 100%);
+background:transparent;
+}
+
+ul {
+  text-align: center;
+  perspective: 1000px;
+}
+
+li {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  opacity: 0;
+  padding: 10px 20px;
+  margin: 10px auto;
+  list-style: none;
+  color: white;
+  transition: all ease 0.3s;
+  border-bottom: 1px solid transparent;
+  font-size: 1.3em;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/****************
+HOVER
+******************/
+li:hover {
+  border-bottom: 1px solid white;
+}
+li:hover a {
+  color:lightgrey;
+}
+
+/****************
+ANIMATION DELAY
+******************/
+li:nth-child(1) {
+  animation-delay: 0.1s
+}
+li:nth-child(2) {
+  animation-delay: 0.1s
+}
+li:nth-child(3) {
+  animation-delay: 0.2s
+}
+li:nth-child(4) {
+  animation-delay: 0.3s
+}
+li:nth-child(5) {
+  animation-delay: 0.4s
+}
+
+
+/****************
+MENU
+******************/
+#menu {
+  color: lightgrey;
+}
+
+.menuBox {
+  padding: 5px;
+  background-color: rgba(139,69,19, 0.5);
+  display: block;
+  z-index: 5;
+}
+
+.active {
+  animation: menuShow 0.7s 1 forwards;
+  background: linear-gradient(to bottom,rgba(139,69,19, 0.8) 50%, rgba(255,203,0,0) 100%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  display: block;
+  opacity: 0;
+}
+
+.hidden {
+  animation: hidden 0.7s 1 forwards;
+  background: linear-gradient(to bottom,rgba(139,69,19, 0.8) 50%, rgba(255,203,0,0) 100%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  display: block;
+  opacity: 1;
+}
+
+i {
+  font-size: 1.5em;
+}
+
+
+/****************
+ANIMATION
+******************/
+@keyframes menuShow {
+  0% {
+      transform: translateY(-100px);
+      box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+    }
+  100% {
+        transform: translateY(0px);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        opacity:1;
+      }
+
+}
+@keyframes hidden {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    opacity:1;
+    }
+  100% {
+    transform: translateY(-100px);
+      box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      }
+
+}
+
+/****************
+MEDIAQUERY
+******************/
