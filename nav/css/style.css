@@ -13,7 +13,7 @@ font-family: 'Arimo', 'KoHo', arial, sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  max-width: 50%;
+  max-width: 500px;
   min-height: 70vh;
   margin: 0 auto;
 }
